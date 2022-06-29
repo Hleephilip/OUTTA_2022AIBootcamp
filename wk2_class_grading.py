@@ -1,16 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[30]:
-
-
 import pickle
 import gzip
 import numpy as np
 import random
-from wk2_ans import operation
 
-def grade():
+def grade(c):
     with gzip.open('wk2_class_data.pickle','rb') as f:
         data = pickle.load(f)
     np.random.randint
@@ -18,7 +11,7 @@ def grade():
 
     lst = range(500)
     test_cases = sorted(random.sample(lst, 100))
-    op = operation()
+    op = c()
 
     for i in range(100):
         op.arrayA = data["A"][test_cases[i]]
@@ -76,10 +69,4 @@ def grade():
     if (correct):
         print("\r", end = "")
         print(f"모든 Test Case를 통과하였습니다!", end = "")
-
-
-# In[ ]:
-
-
-
 
