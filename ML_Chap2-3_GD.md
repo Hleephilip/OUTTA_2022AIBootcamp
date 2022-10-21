@@ -14,6 +14,9 @@ Made by [*Hyunsoo Lee*](https://github.com/frogyunmax) (SNU Dept. of Electrical 
 <br>
 
 ## 3.2. 경사하강법에 대한 정성적 설명
+
+> 이 자료에 사용된 모든 그림은 <인공지능 교육단체 OUTTA 와 함께 하는! 머신러닝 첫 단추 끼우기> 저자 분들께서 제작하신 그림임을 밝힙니다.
+
 <p align="center"><img src="https://remnote-user-data.s3.amazonaws.com/i1xIm9xa6W-UNxASU2Sk5yoFXAVa7g4zZzyuwl-0Q3oB_rp4lcEiIbfZtbSqTOCHQwuI0AH-2SHkbpB5Ji3FqeerkjwIs27uubrNT75pxjqwkU9GWpeQrzDwkmCtcqzr.png" width="400"></p>
 
 - 경사하강법의 과정 (그림)
