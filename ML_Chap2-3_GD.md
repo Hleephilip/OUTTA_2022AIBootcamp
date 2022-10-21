@@ -1,7 +1,7 @@
 # [ML/DL] 2장 - (3). Gradient Descent
 이 자료는 인공지능 교육 비영리단체 OUTTA 에서 출판한 《인공지능 교육단체 OUTTA 와 함께 하는! 머신러닝 첫 단추 끼우기》 를 바탕으로 제작되었습니다. 
 
-원본 Remnote 자료의 경우 [링크](https://www.remnote.com/a/-ml-dl-2-3-/6352a69ff90f29c65d085487)를 통해 확인하실 수 있습니다.
+Remnote 자료의 경우 [링크](https://www.remnote.com/a/-ml-dl-2-3-/6352a69ff90f29c65d085487)를 통해 확인하실 수 있습니다.
 
 Made by [*Hyunsoo Lee*](https://github.com/frogyunmax) (SNU Dept. of Electrical and Computer Engineering, Leader of Mentor Team for 2022 Spring Semester)
 
