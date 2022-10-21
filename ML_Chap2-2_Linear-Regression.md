@@ -130,7 +130,7 @@ Made by [*Hyunsoo Lee*](https://github.com/frogyunmax) (SNU Dept. of Electrical 
     <br> 
 
     (5) *Additional : Using Matrices*
-    > 아래 내용은 서울대학교 데이터사이언스 대학원 MLDL1 Course의 Lecture Notes 를 인용하였습니다.
+    > 아래 내용은 서울대학교 데이터사이언스 대학원 오민환 교수님의 MLDL1 Course Lecture Notes 를 인용하였습니다.
 
 
     Describe Linear Regression Model,
