@@ -168,7 +168,7 @@ $$(v_i, b_i \in \mathbb{R}, \textbf w_i \in \mathbb{R}^m)$$
     - 벡터화 과정의 문제점
         - 여러 행의 데이터를 하나의 행으로 이어서 합쳐주기 때문에, **데이터가 가진 공간적인 정보가 무시**됨
 
-        - 따라서, 단순히 밀집층에서 가중치를 곱하는 방법 외에도 다른 가중치 곱이 존재 (ex. CNN (*Convolution Neural Network*))
+        - 따라서, 단순히 밀집층에서 가중치를 곱하는 방법 외에도 다른 가중치 곱이 존재 (ex. CNN (*Convolutional Neural Network*))
 
 
 <br>
