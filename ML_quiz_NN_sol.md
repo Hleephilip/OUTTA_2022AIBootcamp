@@ -221,6 +221,6 @@ $(a), (b), (c), (d), (e)$ 각각의 값을 $\frac{\partial L}{\partial \textbf{y
 
 [정답]
 
-$$\begin{align} & (a) = {\textbf X_1}^T \cdot \frac{\partial L}{\partial \textbf y} \cdot {\textbf H}^T \\\ & (b) = \frac{\partial L}{\partial \textbf y} \cdot {\textbf H}^T \cdot {\textbf W_2}^T \\\ & (c) = \frac{\partial L}{\partial \textbf y} \cdot {\textbf H}^T \\\ & (d) = (\textbf X_1 \cdot \textbf W_1 + \textbf X_2 \cdot \textbf W_2)^T \cdot \frac{\partial L}{\partial \textbf y} \\\ & (e) = \frac{\partial L}{\partial \textbf y} \\\  \end{align}$$
+$$\begin{align} & (a) = {\textbf X_1}^{\top} \cdot \frac{\partial L}{\partial \textbf y} \cdot {\textbf H}^{\top} \\\ & (b) = \frac{\partial L}{\partial \textbf y} \cdot {\textbf H}^{\top} \cdot {\textbf W_2}^{\top} \\\ & (c) = \frac{\partial L}{\partial \textbf y} \cdot {\textbf H}^{\top} \\\ & (d) = (\textbf X_1 \cdot \textbf W_1 + \textbf X_2 \cdot \textbf W_2)^{\top} \cdot \frac{\partial L}{\partial \textbf y} \\\ & (e) = \frac{\partial L}{\partial \textbf y} \\\  \end{align}$$
 
 
