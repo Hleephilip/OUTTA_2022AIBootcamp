@@ -101,4 +101,4 @@ def descent_down_4d(w_start, learning_rate, num_steps):
 
 ## Solution
 
-Check [ML_quiz_gd_sol.md](https://github.com/frogyunmax/OUTTA_2022AIBootcamp/blob/main/ML_quiz_gd_sol.md)
+Check [ML_quiz_GD_sol.md](https://github.com/frogyunmax/OUTTA_2022AIBootcamp/blob/main/ML_quiz_GD_sol.md)
