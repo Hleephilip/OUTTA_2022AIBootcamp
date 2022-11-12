@@ -115,4 +115,4 @@ $(a), (b), (c), (d), (e)$ 각각의 값을 $\frac{\partial L}{\partial \textbf{y
 
 ## Solution
 
-Check [ML_quiz_nn_sol.md](https://github.com/frogyunmax/OUTTA_2022AIBootcamp/blob/main/ML_quiz_nn_sol.md)
+Check [ML_quiz_NN_sol.md](https://github.com/frogyunmax/OUTTA_2022AIBootcamp/blob/main/ML_quiz_NN_sol.md)
