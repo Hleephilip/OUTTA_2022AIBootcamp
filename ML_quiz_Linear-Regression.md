@@ -81,4 +81,4 @@ def ordinary_least_squares(x, y):
 
 ## Solution
 
-Check [ML_quiz_linear-regression_sol.md](https://github.com/frogyunmax/OUTTA_2022AIBootcamp/blob/main/ML_quiz_linear-regression_sol.md)
+Check [ML_quiz_Linear-Regression_sol.md](https://github.com/frogyunmax/OUTTA_2022AIBootcamp/blob/main/ML_quiz_Linear-Regression_sol.md)
