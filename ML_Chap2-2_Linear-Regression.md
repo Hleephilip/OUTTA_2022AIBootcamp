@@ -143,15 +143,15 @@ Made by [*Hyunsoo Lee*](https://github.com/frogyunmax) (SNU Dept. of Electrical 
     
     Then, 
     
-    $$RSS=(\textbf y  - \textbf X \textbf M)^T (\textbf y  - \textbf X \textbf M)$$
+    $$RSS=(\textbf y  - \textbf X \textbf M)^{\top} (\textbf y  - \textbf X \textbf M)$$
     
     Using Partial derivative,
     
-    $$\frac{\partial (RSS)}{\partial M^{\star}} = -2 \textbf X^T \textbf y + 2 \textbf X^T \textbf X \textbf M^{\star} = 0$$
+    $$\frac{\partial (RSS)}{\partial M^{\star}} = -2 \textbf X^{\top} \textbf y + 2 \textbf X^{\top} \textbf X \textbf M^{\star} = 0$$
     
     Finally, we get ordinary least squares parameter estimates.
     
-    $$M^{\star} = \begin{pmatrix} m^{\star} \\\ b^{\star}\end{pmatrix} = (\textbf X^T \textbf X)^{-1} \textbf X^T \textbf y$$ 
+    $$M^{\star} = \begin{pmatrix} m^{\star} \\\ b^{\star}\end{pmatrix} = (\textbf X^{\top} \textbf X)^{-1} \textbf X^{\top} \textbf y$$ 
 
 
 
