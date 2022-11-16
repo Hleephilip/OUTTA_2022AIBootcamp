@@ -190,7 +190,7 @@ $$g(x)=\text{CrossEntropy}(\textbf{x}, \ [0.2, \ 0.1, \ 0.3, \ 0.15, \ 0.25])$$
 
 우선 Softmax 함수와 Cross-Entropy 함수의 역전파 과정은 다음 그림과 같이 나타낼 수 있다.
 
-> Figure Source : [https://excelsior-cjh.tistory.com/171](https://excelsior-cjh.tistory.com/171)
+> Figure Source : 사이토 고키, Deep Learning from Scratch, 한빛미디어 (2017)
     <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile29.uf.tistory.com%2Fimage%2F99EBF5395B98F7792B42CE" width="600"></p>
 
 위 그림에 나타난 방법을 이용해 역전파 계수를 구할 수 있다. 우선, $(a) = -\frac{0.25}{x[4]}$ 이고, $x[4] = \frac{5}{2+1.5+4+3+5} = \frac{1}{3.1}$ 이다. 
