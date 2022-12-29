@@ -29,10 +29,12 @@ Made by [*Hyunsoo Lee*](https://github.com/frogyunmax) (SNU Dept. of Electrical 
 
 ## 2.3. 최소제곱법 (MSE)
 - 이상치 (Outlier) : 주어진 데이터의 전체적인 경향성에서 크게 벗어난 값
-    <p align="center"><img src="https://remnote-user-data.s3.amazonaws.com/4BbnXRei4wQJjEfe3OUI6VX8E_irW1zt2HaSx8FCThuLvTnqTBwrh0qicQs4cd7eIH5fM60SkGliQswXdpmVw55Ni3uob2Gk4OBPIc9yJcn1bwoh4Uv4e4YfqipaWmTW.png" width="400"></p>
+
+<p align="center"><img src="https://remnote-user-data.s3.amazonaws.com/4BbnXRei4wQJjEfe3OUI6VX8E_irW1zt2HaSx8FCThuLvTnqTBwrh0qicQs4cd7eIH5fM60SkGliQswXdpmVw55Ni3uob2Gk4OBPIc9yJcn1bwoh4Uv4e4YfqipaWmTW.png" width="400"></p>
 
 - 최소제곱법을 사용하는 경우, 이상치가 없어야 (적어야) 잘 적용됨.
-    <p align="center"><img src="https://remnote-user-data.s3.amazonaws.com/Mopgwl2FejpdOI-L5evN_DprmAMDo3dUHcupPaW-n4v3GUSXketulRhGDctDaHecpVflq-EhGwLkV69ZXd0yvOaKFvmhCiJMyogIm8HLldkVsRW0LMcxIwRl3SZvqpDH.png" width="400"></p>
+
+<p align="center"><img src="https://remnote-user-data.s3.amazonaws.com/Mopgwl2FejpdOI-L5evN_DprmAMDo3dUHcupPaW-n4v3GUSXketulRhGDctDaHecpVflq-EhGwLkV69ZXd0yvOaKFvmhCiJMyogIm8HLldkVsRW0LMcxIwRl3SZvqpDH.png" width="400"></p>
 
 - 수학적 모델링
 
@@ -92,66 +94,66 @@ Made by [*Hyunsoo Lee*](https://github.com/frogyunmax) (SNU Dept. of Electrical 
 
 ## 2.4. $m^{\star}$ 와 $b^{\star}$ 구하기
 - Method 1 : 직접 구하기 (Brute-Force)
-    <p align="center"><img src="https://remnote-user-data.s3.amazonaws.com/BC3zZ4AGWaarvp2IAxw8nMf33jN_VZvFamevNDLUe7A97_KmQFe3yMZ-lwqMZzWsozP1HUK-2arB6dRBfb95dzWFHaOa4ZAnMhaRNAv7XrCv-gKGK5Dqrb6UHSwnIAEX.png"></p>
+
+<p align="center"><img src="https://remnote-user-data.s3.amazonaws.com/BC3zZ4AGWaarvp2IAxw8nMf33jN_VZvFamevNDLUe7A97_KmQFe3yMZ-lwqMZzWsozP1HUK-2arB6dRBfb95dzWFHaOa4ZAnMhaRNAv7XrCv-gKGK5Dqrb6UHSwnIAEX.png"></p>
 
 
-    (0) 원리 : 손실 함수가 최솟값을 가질 때 : 
-    
-    $$\nabla L(m, b)| _{m=m^{\star}, \;b=b^{\star}} = 0$$
+(0) 원리 : 손실 함수가 최솟값을 가질 때 : 
 
-    (1) 손실 함수 $L(m, b)$ 전개
+$$\nabla L(m, b)| _{m=m^{\star}, \;b=b^{\star}} = 0$$
 
-    $$ \mathscr{L}(m, b; (x_n, y_n)^{N-1}_{n=0}) 
-    = \sum _{n=0} ^{N-1}{(y_n - (mx_n + b))^2} 
-    = \sum _{n=0} ^{N-1}{(m^2 x_n^2 + b^2 + y_n ^2  + 2bmx_n - 2mx_n y_n - 2by_n)}$$
-    
-    (2) $L(m, b)$을 $m, \; b$에 대해 **편미분** 
+(1) 손실 함수 $L(m, b)$ 전개
 
-    $$ \frac{\partial \mathscr{L} (m, b)}{\partial m} = \sum_{n=0}^{N-1} (2mx_n^2 + 2bx_n - 2x_n y_n ) = 0 $$
+$$\mathscr{L}(m, b; (x_n, y_n)^{N-1}_{n=0}) 
+= \sum _{n=0} ^{N-1}{(y_n - (mx_n + b))^2} 
+= \sum _{n=0} ^{N-1}{(m^2 x_n^2 + b^2 + y_n ^2  + 2bmx_n - 2mx_n y_n - 2by_n)}$$
 
-    $$ \frac{\partial \mathscr{L} (m, b)}{\partial b} = \sum_{n=0}^{N-1} (2b + 2mx_n - 2y_n) = 0
-    $$
+(2) $L(m, b)$을 $m, \; b$에 대해 **편미분** 
 
-    (3) 편미분 식으로부터 $m^{\star}, b^{\star}$ 구하기
+$$\frac{\partial \mathscr{L} (m, b)}{\partial m} = \sum_{n=0}^{N-1} (2mx_n^2 + 2bx_n - 2x_n y_n) = 0$$
 
-    $$m^{\star}=\frac{\sum\limits_{n=0} ^{N-1} {x_{n} y_{n}} - \frac{1}{N} \sum\limits_{n=0} ^{N-1}{x_n} \sum\limits_{n=0} ^{N-1}{y_n}}{\sum\limits_{n=0} ^{N-1} {{x_n}^2} - \frac{1}{N} (\sum\limits_{n=0} ^{N-1}{x_n} )^2}$$
+$$\frac{\partial \mathscr{L} (m, b)}{\partial b} = \sum_{n=0}^{N-1} (2b + 2mx_n - 2y_n) = 0$$
 
-    $$b^{\star} = \bar{y} - m^{\star} \bar{x}$$ 
+(3) 편미분 식으로부터 $m^{\star}, b^{\star}$ 구하기
 
-    - 이렇게 구한 $m^{\star}$와 $b^{\star}$ 를 '**최소제곱추정량**' 이라 한다. 
+$$m^{\star}=\frac{\sum\limits_{n=0} ^{N-1} {x_{n} y_{n}} - \frac{1}{N} \sum\limits_{n=0} ^{N-1}{x_n} \sum\limits_{n=0} ^{N-1}{y_n}}{\sum\limits_{n=0} ^{N-1} {{x_n}^2} - \frac{1}{N} (\sum\limits_{n=0} ^{N-1}{x_n} )^2}$$
 
-    <br>
+$$b^{\star} = \bar{y} - m^{\star} \bar{x}$$ 
 
+- 이렇게 구한 $m^{\star}$와 $b^{\star}$ 를 '**최소제곱추정량**' 이라 한다. 
 
-    (4) 최소제곱법을 사용할 수 없는 경우 
-    1. Dataset의 Data point 개수 $\leq$ 1
-    2. 모든 Data point가 같은 $x_i$ 값을 가지는 경우
-    
-    <br> 
-
-    (5) *Additional : Using Matrices*
-    > 아래 내용은 서울대학교 데이터사이언스 대학원 오민환 교수님의 MLDL1 Course Lecture Notes 를 인용하였습니다.
+<br>
 
 
-    Describe Linear Regression Model,
-    
-    $$\textbf{y} = \textbf{X} \textbf{M} + \textbf{e}$$  
+(4) 최소제곱법을 사용할 수 없는 경우 
+1. Dataset의 Data point 개수 $\leq$ 1
+2. 모든 Data point가 같은 $x_i$ 값을 가지는 경우
 
-    where
-    
-    $$\textbf{y} = \begin{pmatrix} y_{1} \\\ y_{2} \\\ \vdots \\\ y_{n} \end{pmatrix}, \textbf{X}= \begin{pmatrix} 1 & x_1 \\\ 1 & x_2 \\\ \vdots &\vdots \\\ 1 & x_n \end{pmatrix}, \textbf{M}= \begin{pmatrix} m \\\ b \end{pmatrix}, \textbf{e} = \begin{pmatrix} \epsilon_1 \\\ \epsilon_2 \end{pmatrix}$$  
-    
-    Then, 
-    
-    $$RSS=(\textbf y  - \textbf X \textbf M)^{\top} (\textbf y  - \textbf X \textbf M)$$
-    
-    Using Partial derivative,
-    
-    $$\frac{\partial (RSS)}{\partial M^{\star}} = -2 \textbf X^{\top} \textbf y + 2 \textbf X^{\top} \textbf X \textbf M^{\star} = 0$$
-    
-    Finally, we get ordinary least squares parameter estimates.
-    
-    $$M^{\star} = \begin{pmatrix} m^{\star} \\\ b^{\star}\end{pmatrix} = (\textbf X^{\top} \textbf X)^{-1} \textbf X^{\top} \textbf y$$ 
+<br> 
+
+(5) *Additional : Using Matrices*
+> 아래 내용은 서울대학교 데이터사이언스 대학원 오민환 교수님의 MLDL1 Course Lecture Notes 를 인용하였습니다.
+
+
+Describe Linear Regression Model,
+
+$$\textbf{y} = \textbf{X} \textbf{M} + \textbf{e}$$  
+
+where
+
+$$\textbf{y} = \begin{pmatrix} y_{1} \\\ y_{2} \\\ \vdots \\\ y_{n} \end{pmatrix}, \textbf{X}= \begin{pmatrix} 1 & x_1 \\\ 1 & x_2 \\\ \vdots &\vdots \\\ 1 & x_n \end{pmatrix}, \textbf{M}= \begin{pmatrix} m \\\ b \end{pmatrix}, \textbf{e} = \begin{pmatrix} \epsilon_1 \\\ \epsilon_2 \end{pmatrix}$$  
+
+Then, 
+
+$$RSS=(\textbf y  - \textbf X \textbf M)^{\top} (\textbf y  - \textbf X \textbf M)$$
+
+Using Partial derivative,
+
+$$\frac{\partial (RSS)}{\partial M^{\star}} = -2 \textbf X^{\top} \textbf y + 2 \textbf X^{\top} \textbf X \textbf M^{\star} = 0$$
+
+Finally, we get ordinary least squares parameter estimates.
+
+$$M^{\star} = \begin{pmatrix} m^{\star} \\\ b^{\star}\end{pmatrix} = (\textbf X^{\top} \textbf X)^{-1} \textbf X^{\top} \textbf y$$ 
 
 
 
